@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import {placeCardPropTypes} from "../../prop-types/place-card";
 
 const PlaceCard = (props) => {
   const {
@@ -48,12 +48,6 @@ const PlaceCard = (props) => {
   );
 };
 
-PlaceCard.propTypes = {
-  image: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  type: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
-};
+PlaceCard.propTypes = placeCardPropTypes;
 
 export default PlaceCard;
