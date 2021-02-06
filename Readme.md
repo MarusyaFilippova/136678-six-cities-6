@@ -1,7 +1,7 @@
 # Личный проект «Шесть городов» [![Build status][travis-image]][travis-url]
 
 * Студент: [Мария Филиппова](https://up.htmlacademy.ru/react/6/user/136678).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Филиппова](https://up.htmlacademy.ru/react/6/user/136678).
 
 ---
 
