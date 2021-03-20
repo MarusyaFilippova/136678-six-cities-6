@@ -9,10 +9,11 @@ import OfferPage from '../offer-page/offer-page';
 import NotFoundPage from '../not-found-page/not-found-page';
 
 import {placeCardPropTypes} from '../../prop-types/place-card';
+import {reviewPropTypes} from '../../prop-types/review';
 
 
 const App = (props) => {
-  const {places} = props;
+  const {places, reviews} = props;
 
   return (
     <BrowserRouter>
@@ -27,7 +28,7 @@ const App = (props) => {
           <FavoritesPage />
         </Route>
         <Route exact path="/offer/:id">
-          <OfferPage />
+          <OfferPage reviews={reviews}/>
         </Route>
         <Route>
           <NotFoundPage />
@@ -39,7 +40,10 @@ const App = (props) => {
 
 App.propTypes = {
   places: PropTypes.arrayOf(
-      placeCardPropTypes
+      PropTypes.shape(placeCardPropTypes)
+  ),
+  reviews: PropTypes.arrayOf(
+      PropTypes.shape(reviewPropTypes)
   )
 };
 
